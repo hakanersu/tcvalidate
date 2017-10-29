@@ -12,6 +12,10 @@ func Validate(tcnumber string) bool {
 		return false
 	}
 
+	if len(runes) != 11 {
+		return false
+	}
+
 	odd, even, sum, rebuild := 0, 0, 0, ""
 
 	for i := 0; i < len(runes)-2; i++ {
