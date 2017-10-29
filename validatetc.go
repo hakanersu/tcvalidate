@@ -8,6 +8,10 @@ func Validate(tcnumber string) bool {
 
 	runes := []rune(tcnumber)
 
+	if isSame(runes) {
+		return false
+	}
+
 	odd, even, sum, rebuild := 0, 0, 0, ""
 
 	for i := 0; i < len(runes)-2; i++ {
@@ -42,4 +46,14 @@ func Validate(tcnumber string) bool {
 	}
 
 	return false
+}
+
+func isSame(a []rune) bool {
+	b := a[0:10]
+	for i := 1; i < len(b); i++ {
+		if b[i] != b[0] {
+			return false
+		}
+	}
+	return true
 }
