@@ -18,7 +18,7 @@ func Validate(tcnumber string) bool {
 			return false
 		}
 
-		if a%2 == 0 {
+		if (i+1)%2 == 0 {
 			odd += a
 		} else {
 			even += a
