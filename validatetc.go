@@ -4,7 +4,7 @@ import (
 	"strconv"
 )
 
-func validate(tcnumber string) bool {
+func Validate(tcnumber string) bool {
 
 	runes := []rune(tcnumber)
 
